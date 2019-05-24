@@ -1,0 +1,16 @@
+﻿@model Homework6.Models.Card
+@{
+    ViewBag.Title = "Birthday Card Generator";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary()
+
+    <p>From: @Html.TextBoxFor(t => t.From)</p>
+    <p>To: @Html.TextBoxFor(t => t.To)</p>
+    <p>Message: @Html.TextBoxFor(t => t.Message)</p>
+    <div class="btn btn-success">
+    <input type="submit" value="Send Card" style="color:white;background-color:#5cb85c;border:none" />
+    </div>
+}
